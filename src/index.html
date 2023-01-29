@@ -3,12 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/favicon-32x32.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Time Tracking</title>
   </head>
   <body>
+    <main class="main">
+      <div class="card card--profile">
+        <img
+          class="card__image"
+          src="assets/images/image-jeremy.png"
+          alt="Jeremy image"
+        />
+        <p class="card__report">Report for</p>
+        <h1 class="card__name">Jeremy Robson</h1>
+        <nav class="card__select">
+          <ul id="card-list" class="card__list">
+            <li class="card__list-item" data-filter="daily">Daily</li>
+            <li
+              class="card__list-item card__list-item--active"
+              data-filter="weekly"
+            >
+              Weekly
+            </li>
+            <li class="card__list-item" data-filter="monthly">Monthly</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="card card--work">
+        <h3 class="card__title">Work</h3>
+        <span class="card__current">32hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">36hrs</span>
+        </div>
+      </div>
+
+      <div class="card card--play">
+        <h3 class="card__title">Play</h3>
+        <span class="card__current">10hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">8hrs</span>
+        </div>
+      </div>
+      <div class="card card--study">
+        <h3 class="card__title">Study</h3>
+        <span class="card__current">4hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">7hrs</span>
+        </div>
+      </div>
+      <div class="card card--exercise">
+        <h3 class="card__title">Exercise</h3>
+        <span class="card__current">4hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">5hrs</span>
+        </div>
+      </div>
+      <div class="card card--social">
+        <h3 class="card__title">Social</h3>
+        <span class="card__current">5hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">10hrs</span>
+        </div>
+      </div>
+      <div class="card card--self-care">
+        <h3 class="card__title">Self Care</h3>
+        <span class="card__current">2hrs</span>
+        <div class="card__footer">
+          <span class="card__last">Last week - </span>
+          <span class="card__previous">2hrs</span>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

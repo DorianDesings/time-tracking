@@ -1,1 +1,6 @@
-/* ESTILOS DEL MAIN */
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 600px;
+  gap: 2rem;
+}

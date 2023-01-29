@@ -1,0 +1,129 @@
+@use '../mixins/pseudo.scss' as *;
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  transition: background-color 0.2s;
+  &__image {
+    width: 50%;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &__report {
+    position: absolute;
+    top: 175px;
+    font-weight: 300;
+  }
+
+  &__name {
+    position: absolute;
+    top: 200px;
+    font-weight: 300;
+    font-size: 3rem;
+  }
+
+  &__select {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__list-item {
+    margin: 2.5rem 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__current {
+    margin: 2rem 0;
+    font-size: 3.5rem;
+  }
+
+  &--profile {
+    transform: translateZ(0);
+    overflow: hidden;
+    grid-row: 1/3;
+
+    &::after {
+      @include pseudo(100%, 65%) {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 1rem;
+        background-color: var(--profile);
+      }
+    }
+  }
+
+  &:not(.card--profile) {
+    align-self: end;
+    cursor: pointer;
+  }
+
+  &:not(.card--profile):hover {
+    background-color: var(--card-hover);
+  }
+
+  &:not(.card--profile)::before {
+    @include pseudo(100%, 100px);
+    top: -50px;
+    left: 0;
+    z-index: -1;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  &--work::before,
+  &--play::before,
+  &--study::before,
+  &--exercise::before,
+  &--social::before,
+  &--self-care::before {
+    background-repeat: no-repeat;
+    background-position: right -0px;
+  }
+
+  &--work::before {
+    background-color: var(--work);
+    background-image: url(../assets/images/icon-work.svg);
+  }
+  &--play::before {
+    background-color: var(--play);
+    background-image: url(../assets/images/icon-play.svg);
+  }
+  &--study::before {
+    background-color: var(--study);
+    background-image: url(../assets/images/icon-study.svg);
+  }
+  &--exercise::before {
+    background-color: var(--exercise);
+    background-image: url(../assets/images/icon-exercise.svg);
+  }
+  &--social::before {
+    background-color: var(--social);
+    background-image: url(../assets/images/icon-social.svg);
+  }
+  &--self-care::before {
+    background-color: var(--self-care);
+    background-image: url(../assets/images/icon-self-care.svg);
+  }
+}

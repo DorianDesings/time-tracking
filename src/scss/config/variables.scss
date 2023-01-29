@@ -1,5 +1,23 @@
 :root {
-  /* Variables CSS */
+  //Background
+  --bg-color: rgb(0, 6, 30);
+  // Profile
+  --profile: hsl(246, 80%, 60%);
+  // Card background
+  --card-bg: hsl(236, 44%, 20%);
+  --card-hover: hsl(236, 41%, 34%);
+  //  Work
+  --work: hsl(15, 100%, 70%);
+  // Play
+  --play: hsl(195, 74%, 62%);
+  // Study
+  --study: hsl(348, 100%, 68%);
+  // Exercise
+  --exercise: hsl(145, 58%, 55%);
+  // Social
+  --social: hsl(264, 64%, 52%);
+  // Self Care
+  --self-care: hsl(43, 84%, 65%);
 }
 
 /* Variables SASS */
