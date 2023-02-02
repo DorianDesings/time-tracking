@@ -1,4 +1,5 @@
-import { fetchData } from './utils/fetch-data';
+import dataJson from '../data/data.json';
+console.log(dataJson);
 
 const allCardsCurrent = document.querySelectorAll('.card__current');
 const allCardsPreviuos = document.querySelectorAll('.card__previous');
@@ -14,14 +15,8 @@ const printData = (data, index) => {
 
 //Función que filtra los datos
 const filterData = period => {
-  const request = fetchData('../data/data.json');
-  request
-    .then(response => response.json())
-    .then(data => {
-      data.forEach((item, index) => printData(item.timeframes[period], index));
-    })
+  dataJson.forEach((item, index) => printData(item.timeframes[period], index));
 
-    .catch(err => console.log(err));
   // request
   //   .then(response => response.clone())
   //   .then(responseClone => responseClone.json())
